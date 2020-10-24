@@ -170,7 +170,7 @@ button.sign-up {
 
 .sectionTwo {
 	width: 1175px;
-	height: 526px;
+	min-height: 526px;
 	margin: 30px auto;
 	display: flex;
 	flex-wrap: wrap;
@@ -207,35 +207,103 @@ button.sign-up {
 	.sectionTwo-cards{
 		width: 313px;
 		height: 244px;
-		background: #FFFFFF;
 		box-shadow: 0px 30px 100px rgba(47, 55, 237, 0.1);
 		border-radius: 10px;
 		margin-right: 15px;
 		margin-bottom:15px;
-		margin-top:15px;
+		margin-top:15px;		
+		position: relative;
+		z-index: 10;
+		
+	}
+	.cards-overlay{
+		width: 100%;
+		height: 100%;
+		background: #FFFFFF;
+		border-radius: 10px;
+		position:absolute;
+		top:0;
+		left:0;
 		padding-left: 52px;
 		padding-top:32px;
 		padding-right: 25px;
-		position: relative;
 		z-index: 10;
-		&:after{
-			content:"";
-			display: block;
-			width: 270px;
-			height: 182px;
-			position: absolute;
-			top:50px;
-			left:22px;
-			border-radius:10px;
-			z-index: 9;
-		}
 	}
 }
-.sectionTwo-cards:hover:after {
+.cards-shadow {
+	display: none;
+	width: 270px;
+	height: 182px;
+	position: absolute;
+	top:50px;
+	left:22px;
 	background: rgba(47, 128, 237, 0.2);
 	filter: blur(50px);
 	border-radius: 10px;
-	z-index: 9;
+	z-index: 1;	
+}
+.sectionTwo-cards:hover .cards-shadow {
+	display: block;	
+}
+
+// SECTION-3 SECTION-3 SECTION-3 SECTION-3 SECTION-3 SECTION-3 SECTION-3 SECTION-3 SECTION-3
+.sectionThree {
+	width: 100%;
+	min-height: 591px;
+	background:url("../img/3-back.svg") no-repeat top right;
+	margin-top: 100px;
+	padding: 1px;
+	position: relative;
+
+}
+.sectionThree__container{
+	width: 875px;
+	margin:0 auto;
+	margin-top:130px;
+	h2 {		
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 124.41%;
+		
+	}
+}
+.sectionThree__cards {
+	margin-top: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	.item {
+		width: 225px;
+		min-height:195px;
+		margin-right: 100px;
+		&:last-child{
+			margin-right:0;
+		}
+		h3 {
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 143.55%;
+			letter-spacing: 0.05em;
+			color: #2F80ED;
+		}
+		p {
+			margin-top:9px;
+			font-size: 14px;
+			line-height: 143.55%;
+			color: #636363;
+		}
+	}
+} 
+.sectionThree__elipse {
+	position: absolute;
+	width: 231px;
+	height: 231px;
+	border-radius:50%;
+	right: -37px;
+	top: -24px;
+	background: radial-gradient(68.31% 68.31% at 50% 50%, #FFFFFF 0%, #CADEF9 100%), #FFFFFF;
+	box-shadow: 0px 10px 50px rgba(119, 157, 255, 0.3);
+	filter: blur(20px);
 }
 // MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA
 @import "media.less"; 
