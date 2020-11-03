@@ -5,6 +5,11 @@
   font-size: 14px;
   font-family: Montserat, sans-serif;
 }
+h2.h2-title-black {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 124.41%;
+}
 .main {
   width: 100%;
   height: 750px;
@@ -232,6 +237,7 @@ button.sign-up {
   margin-top: 100px;
   padding: 1px;
   position: relative;
+  overflow-x: hidden;
 }
 .sectionThree__container {
   width: 875px;
@@ -243,28 +249,33 @@ button.sign-up {
   font-size: 30px;
   line-height: 124.41%;
 }
-.sectionThree__cards {
+.sectionThree__cards,
+.sectionFour__cards {
   margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-.sectionThree__cards .item {
+.sectionThree__cards .item,
+.sectionFour__cards .item {
   width: 225px;
   min-height: 195px;
   margin-right: 100px;
 }
-.sectionThree__cards .item:last-child {
+.sectionThree__cards .item:last-child,
+.sectionFour__cards .item:last-child {
   margin-right: 0;
 }
-.sectionThree__cards .item h3 {
+.sectionThree__cards .item h3,
+.sectionFour__cards .item h3 {
   font-weight: 600;
   font-size: 14px;
   line-height: 143.55%;
   letter-spacing: 0.05em;
   color: #2F80ED;
 }
-.sectionThree__cards .item p {
+.sectionThree__cards .item p,
+.sectionFour__cards .item p {
   margin-top: 9px;
   font-size: 14px;
   line-height: 143.55%;
@@ -277,8 +288,7 @@ button.sign-up {
   border-radius: 50%;
   right: -37px;
   top: -24px;
-  background: linear-gradient(-134deg, #0083ff 0, #d582ff 100%);
+  background: radial-gradient(68.31% 68.31% at 50% 50%, #FFFFFF 0%, #CADEF9 100%), #FFFFFF;
   box-shadow: 0px 10px 50px rgba(119, 157, 255, 0.3);
   filter: blur(20px);
 }
-/*# sourceMappingURL=main.css.map */
